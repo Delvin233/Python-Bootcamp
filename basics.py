@@ -38,3 +38,6 @@
 
 # f strings
 # f" there are {25+22+28} days remaining
+
+# string methods: basically functions that live on objects
+# name.capitalize(), name.upper(),
