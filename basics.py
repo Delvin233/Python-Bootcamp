@@ -41,3 +41,11 @@
 
 # string methods: basically functions that live on objects
 # name.capitalize(), name.upper(),
+# name.strip() defaults to removing white spaces, yet you can decide
+# new_name = "....Delvin.."
+# what it shoud strip with ["chars"]
+# for example: new_name.strip["."] would remove the .
+# theres lstrip() and rstrip() as weell
+#
+
+# you can also chain methods: new_name.strip(".").upper()
