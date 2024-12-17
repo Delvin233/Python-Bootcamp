@@ -49,3 +49,8 @@
 #
 
 # you can also chain methods: new_name.strip(".").upper()
+
+# in, not , is
+# help(ord)
+
+# conditionals: if ,if...else, if...elif, if ....elif.... else
