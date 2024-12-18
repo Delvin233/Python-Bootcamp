@@ -54,3 +54,6 @@
 # help(ord)
 
 # conditionals: if ,if...else, if...elif, if ....elif.... else
+# the conditionals can be nested
+
+# logical "and" and "or"
