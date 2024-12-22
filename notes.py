@@ -56,4 +56,14 @@
 # conditionals: if ,if...else, if...elif, if ....elif.... else
 # the conditionals can be nested
 
-# logical "and" and "or"
+# logical "and" , "or" . "not"
+# the order of presedence is not > and > or
+# name.isnumeric() is a method to check if a variable is numeric
+
+# loops: whille, for
+# Do your best to avaid infintie loops
+# remeber to indent appropiately
+# break and continue keywords can be used to manipulate the loops
+# while True: ..... break ; this would end the code at the condition
+# while False:...... false : this would skip the condition
+# rnage(start, stop, step). The stop is not inclusssive
