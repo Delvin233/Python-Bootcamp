@@ -148,3 +148,91 @@ def double_score():
 double_score()
 print(score)
 """
+
+# lists are orderred collection of values
+# rndoms  = [99, "Macis", 233, True]
+# the values in the lists can be updated at a particular index or
+# with the append  keyword
+# extend is another keyword
+# insert is another keyword
+
+"""randoms = [99, "Macis", 233, True]
+randoms.append(False)
+
+randoms[1] = "Light"
+
+randoms.extend("Men")
+
+randoms.insert(0, "Dark")  # this would take the spot of index 9
+
+print(randoms)"""
+# list slicing : list[start: end: step]
+"""nums = [2, 3, 4, 5]
+nums[1:3] = ["a", "b", "c"]
+print(nums)"""
+
+# looping through lists
+"""emails = ["man@man.com", "boys@boys.com", "women@women.com", "oldies@oldies.com"]
+for email in emails:
+    print(f"Sending new mails to {email}")
+"""
+# You can nest a list. Normally called 2D List
+"""example = [["me", 22], ["you", 12], ["they", 34]]
+print(example[1])
+print(example[1][1])"""
+
+# concatonating lists
+# multiplying lists
+# list methods : count, revere, sort, split, join
+"""even = [2, 4, 6, 2, 4]
+
+odd = [1, 3, 5]
+
+new = even + odd
+multiply_List = even * 2
+counter = even.count(2)
+reverser = even.reverse()
+sortedList = even.sort()  # default is in ascending order
+reverseSort = even.sort(reverse=True)
+print(new)
+print(multiply_List)
+print(counter)
+print(sortedList)
+print(reverseSort)"""
+
+# For list mutablility, don't get lost
+# lemme use this example
+# num1 = [1,2,3]
+# num1 = num2
+# if i append a value to num2, it'd also affect num1
+# for instance: num2.append(4)
+# this is so because there are assigned the same id
+
+# comparing lists
+# we can use == and is
+# the difference is that == compared the contecnt of the lists
+# the order is even checked
+# is, checks to see if they have the same id in memory
+
+"""date = "03/04/1999"
+
+splitted = date.split("/")
+joined = "".join(date)  # outputs the string form of the list
+print(splitted)
+print(joined)"""
+
+# list unpacking
+angles = [0, 180, 360, 334, 323, 22233]
+zero, hundred, threeSixty, *nonse = angles
+print(zero)
+print(nonse)  # the asterisk used above would take the remainng values of the lists
+# that have not been assigned
+
+# making a shallow copy
+# this means that it wont have the same id and that it wont copy
+# any nested lists
+angles_Copy = angles.copy()
+angles_Copy2 = angles[:]
+
+print(angles_Copy)
+print(angles_Copy2)
