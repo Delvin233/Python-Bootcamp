@@ -222,17 +222,67 @@ print(splitted)
 print(joined)"""
 
 # list unpacking
-angles = [0, 180, 360, 334, 323, 22233]
+"""angles = [0, 180, 360, 334, 323, 22233]
 zero, hundred, threeSixty, *nonse = angles
 print(zero)
-print(nonse)  # the asterisk used above would take the remainng values of the lists
+print(nonse)"""  # the asterisk used above would take the remainng values of the lists
 # that have not been assigned
 
 # making a shallow copy
 # this means that it wont have the same id and that it wont copy
 # any nested lists
-angles_Copy = angles.copy()
+"""angles_Copy = angles.copy()
 angles_Copy2 = angles[:]
 
 print(angles_Copy)
 print(angles_Copy2)
+"""
+
+# Dictionaries
+# to group related unordered data. In situations where lists dont help
+# it uses key-value pairs
+book = {"title": "Vagabond", "Ratings": 5, "Lore": "Very Acurate"}
+
+book["title"] = "Berserk"
+book["Source"] = "Nihon"
+jjk = book.get("Juustsu")
+no_title = book.pop("title")
+popped = book.popitem()  # this would return the key and value of the
+# book.clear()
+del book["Lore"]
+
+print(book)
+# print(book["title"])
+print(jjk)
+print(no_title)
+print(popped)
+
+# Dictionaries are mutable: so recall from lists num1 = num2
+# they would have the same id. so updating num2 affects num1
+# uses the == and is . Same as lists
+
+numbers = {1: "one", 2: "two", 3: "three"}
+
+all_keys = numbers.keys()
+all_values = numbers.values()
+all_items = numbers.items()
+
+updated_num = {4: "four", 5: "five"}
+more_updated_nums = {"music": ["Tems", "Ayra Star"]}
+new = {**numbers, **updated_num}
+piped_new = (
+    numbers | updated_num | more_updated_nums
+)  # the right side wins in case of a duplicatd key
+
+numbers.update(updated_num)
+
+print(all_keys)
+print(all_values)
+print(all_items)
+print(new)
+print(piped_new)
+# dictionary  unpacking
+for key, value in all_items:
+    print(f"key is {key}. Value is {value}")
+
+# we can nest lists and call what we want with [key][nmsted-key]
