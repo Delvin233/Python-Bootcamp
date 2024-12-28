@@ -241,27 +241,27 @@ print(angles_Copy2)
 # Dictionaries
 # to group related unordered data. In situations where lists dont help
 # it uses key-value pairs
-book = {"title": "Vagabond", "Ratings": 5, "Lore": "Very Acurate"}
+"""book = {"title": "Vagabond", "Ratings": 5, "Lore": "Very Acurate"}
 
 book["title"] = "Berserk"
 book["Source"] = "Nihon"
 jjk = book.get("Juustsu")
 no_title = book.pop("title")
-popped = book.popitem()  # this would return the key and value of the
+popped = book.popitem() """  # this would return the key and value of the
 # book.clear()
-del book["Lore"]
+"""del book["Lore"]
 
 print(book)
 # print(book["title"])
 print(jjk)
 print(no_title)
-print(popped)
+print(popped)"""
 
 # Dictionaries are mutable: so recall from lists num1 = num2
 # they would have the same id. so updating num2 affects num1
 # uses the == and is . Same as lists
 
-numbers = {1: "one", 2: "two", 3: "three"}
+"""numbers = {1: "one", 2: "two", 3: "three"}
 
 all_keys = numbers.keys()
 all_values = numbers.values()
@@ -272,17 +272,92 @@ more_updated_nums = {"music": ["Tems", "Ayra Star"]}
 new = {**numbers, **updated_num}
 piped_new = (
     numbers | updated_num | more_updated_nums
-)  # the right side wins in case of a duplicatd key
+)"""  # the right side wins in case of a duplicatd key
 
-numbers.update(updated_num)
+"""numbers.update(updated_num)
 
 print(all_keys)
 print(all_values)
 print(all_items)
 print(new)
-print(piped_new)
+print(piped_new)"""
 # dictionary  unpacking
-for key, value in all_items:
-    print(f"key is {key}. Value is {value}")
+"""for key, value in all_items:
+    print(f"key is {key}. Value is {value}")"""
 
 # we can nest lists and call what we want with [key][nmsted-key]
+
+# Tuples
+# they are immutable : we cant change the elements
+# they are ordered like lists
+# they have indexes
+"""names = ("me", "you", "we", "we")
+"""
+
+# use a trailing comma for a single tuple
+# leaving the comma makes Python assume we want an expression
+"""manga = ("Wild Strawberry",)
+"""
+# tuple index and count
+"""print(names.count("we"))
+print(names.index("you"))"""
+# Tuples can be used as keys in dictionaries
+
+# SEts
+# they are immutable
+# using == and is behaves like lists or dictioanries or even tuples
+"""set_of_numbers = {1, 2, 3, 4, 5}
+odds = {2.3, 3.3, 3.33, 2, 5}
+
+empty_set = set()
+single_set = {1}
+# using just {} makes it a dictionary
+
+adding_another_vale = set_of_numbers.add(10)
+removing_a_value = set_of_numbers.remove(2)
+discard_a_set = set_of_numbers.discard(44)  # wont throw a key error
+
+intersectio = set_of_numbers & odds
+union = set_of_numbers | odds
+difference = set_of_numbers - odds """  # order is important here
+# it  returns values in the left side
+# which are not in the right side
+
+"""print(set_of_numbers)
+print(intersectio)
+print(union)
+print(difference)"""
+
+# RETURN TO FUNCTIONS
+# in cases where do not know how many arguments we want to take
+# we use the *args  wildcard
+#  you can use any name after the *
+
+
+"""def average(word, *args):
+    total = 0
+    for arg in args:
+        total += arg
+    print(word)
+    return total / len(args)"""
+
+
+# *arg unpacking
+"""print(average("Anyhow", *[1, 2, 3, 1, 2]))"""
+
+
+# the *args would collect the remaining  arguments and store them in a tuple
+"""print(average("Anyhow", 1, 2, 3, 1, 2))
+
+"""
+# **kwargs
+# we use the ** to write a function that accepts any number of
+# keyword arguments into key-value pairs
+
+
+"""def demo(**kwargs):
+    print(kwargs)
+
+
+print(demo(name=45, color="red"))"""
+# they are stored in a dictionary argument
