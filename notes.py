@@ -361,3 +361,21 @@ print(difference)"""
 
 print(demo(name=45, color="red"))"""
 # they are stored in a dictionary argument
+
+# HANDLING ERRORS
+"""try:
+    num = int(input("a number "))
+except:  # (ValueError, EOFError):
+    print("id pick for you")
+    num = 0"""
+"""except EOFError:
+    print("You didnt enter anything")"""  # this would give an error since we didnt specify any error above
+
+"""print(f"{num} was chosen")"""
+
+# ANTICIPATING ERRORS
+# LOOK BEFORE YOU LEAP
+"""THE LOGIC HERE IS: IF I CAN DO THIS, THEN ID DO THIS"""
+# EASIER TO ASK FOR FORGIVENESS THAN PERMISSION
+"""THE LOGIC HERE IS: YOU ASSUME SOMETHING TO WORK IF IT DOESNT THEN WE DO THIS"""
+# The above uses a lot of try and accept and "more pythony"
