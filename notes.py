@@ -379,3 +379,25 @@ except:  # (ValueError, EOFError):
 # EASIER TO ASK FOR FORGIVENESS THAN PERMISSION
 """THE LOGIC HERE IS: YOU ASSUME SOMETHING TO WORK IF IT DOESNT THEN WE DO THIS"""
 # The above uses a lot of try and accept and "more pythony"
+
+# MODULES
+# they are simple python file(s) that enable us to import and use in other files
+# we can use built-in ones, personal or third-party ones
+
+# PIP
+# we install art from PyPi https://pypi.org/
+# it is used to generate an ascii of a word
+# use pip install art
+# or python3 -m pip install art
+"""import art
+
+print(art.text2art("OZEBA"))"""
+
+# Now we try translate
+# pip install translate
+"""from translate import Translator
+
+translator_test = Translator(to_lang="fr")
+sentence = translator_test.translate("Hello World")
+print(sentence)
+"""
