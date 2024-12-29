@@ -401,3 +401,106 @@ translator_test = Translator(to_lang="fr")
 sentence = translator_test.translate("Hello World")
 print(sentence)
 """
+# O O P  : Object Oriented Programming
+# an appraoch to organizing code
+# it involves modeling "things" into Python objects
+
+# this is done so we dont hardcode . Instead we use a method
+
+
+# CLASS: it describes what properties and functionality indiviual objects
+#        will contain: basically recipies used
+# INSTANCE: these are created from a class
+"""class Puppy:
+    # CLASS ATTRIBUTES: they affect the whole class, giving some features to the class
+    species = "canine"
+
+    # CLASS METHODS
+    # They are not concerned with a specific instance of the class
+    # They only affect the CLASS
+    @classmethod
+    def register_stray(cls):  # cls would be whatever our class is
+        return cls("comming soon", "soon", "unknown")
+
+    def __init__(self, name, breed, location):
+        self.name = name
+        self.breed = breed
+        self.location = location
+        self.tricks = []
+
+        # including methods to our instance
+
+    def bark(self):
+        print(f"{self.name} says woof")
+
+    def learn_trick(self, new_trick):
+        if new_trick not in self.tricks:
+            self.tricks.append(new_trick)
+
+    def perform_trick(self, trick):
+        if trick in self.tricks:
+            print(f"{self.name} performs {trick}")
+        else:
+            print(f"{self.name} has to learn to {trick}")
+
+
+# alejandro and tina are our instances
+alejandro = Puppy("alejandro", "Kwadaso Pitbul", 1223)
+tina = Puppy("Tina", "Kwadaso Mastiff", "Kwadaso")
+
+tina.learn_trick("dance")
+tina.learn_trick("stand")
+alejandro.species = "Kwadaso Mamamls"
+stray_info = Puppy.register_stray()
+
+
+print(tina.perform_trick("dance"))
+print(tina.perform_trick("whine"))
+print(alejandro.species)
+print(stray_info.name)
+
+
+# CLASS INHERITANCE
+# where another class gains everything of another class
+class Cat:
+    def __init__(self, name):
+        self.name = name
+
+    def meow(self):
+        print(f"{self.name} mews!!")
+
+
+class Lion(Cat):
+    def purr(self):
+        print(f"{self.name} purs")
+
+
+namen = Lion("Blue")
+print(namen.meow())
+
+
+class Doggy(Puppy):
+
+    def details(self):
+        print(f"{self.name} lives in {self.location}")
+
+
+stanley = Doggy(name="Stanley", location="Adum", breed="Adum Chihuahua")
+print(stanley.details())
+
+
+# USING THE SUPER KEYWORD
+class Catze(Cat):
+    def __init__(self, name, squad_name):
+        super().__init__(name)  # this name here is inherrited from Puppy class
+        self.squad_name = squad_name
+
+    def has_a_squad(self):
+        print(f"{self.name} has a squad called {self.squad_name}")
+
+
+kitty = Catze(name="Abanga", squad_name="Geng")
+print(kitty.has_a_squad())
+"""
+
+print("COMPLETE")
